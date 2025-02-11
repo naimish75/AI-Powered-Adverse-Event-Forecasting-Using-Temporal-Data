@@ -53,9 +53,9 @@ The project utilizes publicly available datasets:
 
 
 ## Future Enhancements
-- 🔹 Expand to **multi-modal analysis** (combining clinical notes, imaging, and genomic data).
-- 🔹 Implement **knowledge graph-based drug interactions**.
-- 🔹 Enhance model interpretability with **SHAP/LIME explanations**.
+- Expand to **multi-modal analysis** (combining clinical notes, imaging, and genomic data).
+- Implement **knowledge graph-based drug interactions**.
+- Enhance model interpretability with **SHAP/LIME explanations**.
 
 
 
