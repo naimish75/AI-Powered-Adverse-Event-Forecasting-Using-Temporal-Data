@@ -1,4 +1,4 @@
-# AI-Powered-Adverse-Event-Forecasting-Using-Temporal-Data
+# AI Powered Adverse Event Forecasting Using Temporal Data
 
 
 ## Overview
