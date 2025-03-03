@@ -16,9 +16,6 @@ The project utilizes publicly available datasets:
 | Dataset | Description | Access | Size |
 |---------|-------------|--------|------|
 | **FAERS (FDA)** | Reports of adverse drug reactions | [Download](https://fis.fda.gov/extensions/FPD-QDE-FAERS/FPD-QDE-FAERS.html) | 60-140 MB per quarter |
-| **ClinicalTrials.gov** | Data on clinical drug trials and reported adverse events | [Download](https://clinicaltrials.gov/ct2/resources/download) | Several GBs |
-| **WHO ICTRP** | International clinical trials registry data | [Download](https://www.who.int/clinical-trials-registry-platform/network/who-data-set/downloading-records-from-the-ictrp-database) | 200-500 MB |
-| **OpenFDA API** | Live API for real-time adverse event tracking | [API Docs](https://open.fda.gov/apis/drug/event/) | API-based |
 
 ## Tech Stack
 - **Programming Language:** Python
