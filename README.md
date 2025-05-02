@@ -1,16 +1,16 @@
-## Drug Interaction & Adverse Risk Forecasting System
+### Drug Interaction & Adverse Risk Forecasting System
 
-##🚀 Objective
+## 🚀 Objective
 
 The aim of this project is to develop a comprehensive drug interaction analysis and risk forecasting system that not only detects overlapping drug components but also provides severity assessment, future risk projection, and contextual medical insight. Unlike traditional static databases, this system integrates predictive modeling, intelligent language models, and a Retrieval-Augmented Generation (RAG) pipeline to deliver real-time, evidence-driven drug safety evaluations.
 
-##📂 Dataset Information
+## 📂 Dataset Information
 
 Drug_Info.Json: Contains structured metadata on medications including active and inactive ingredients.
 
 FAERS Aggregated Dataset (CSV): Derived from FDA's Adverse Event Reporting System, this dataset includes historical drug-reaction counts by report date.
 
-🧰 Core Tech Stack & Libraries
+## 🧰 Core Tech Stack & Libraries
 
 Frontend: Streamlit
 
@@ -24,7 +24,7 @@ Image Handling: PIL, base64
 
 Other Tools: unidecode, scikit-learn, pandas, numpy
 
-##🧠 Methods & Architecture
+## 🧠 Methods & Architecture
 
 1. Interaction Detection
 
@@ -74,7 +74,7 @@ A conversational agent that understands drug queries and explains interaction ri
 
 Powered by vector embeddings (e.g., FAISS) and retrieval pipelines.
 
-##🧩 Framework Overview
+## 🧩 Framework Overview
 
 User Input
    └─→ Interaction Check (Drug_Info.Json)
@@ -83,7 +83,7 @@ User Input
                 └─→ Combined Summary (GPT-4 Vision)
                         └─→ Output: Summary + Plot + Risk Level
 
-##🔍 How We Detect Interactions & Forecast Risk
+## 🔍 How We Detect Interactions & Forecast Risk
 
 Ingredient Overlap: Each drug’s ingredients are normalized and compared. Exact matches signal potential interaction.
 
@@ -95,7 +95,7 @@ Forecasting: For each drug, adverse event counts are modeled using ARIMA. A fore
 
 Visual + Textual Insight: A combined visual and narrative summary is presented to communicate clinical impact.
 
-##⭐ Key Differentiators
+## ⭐ Key Differentiators
 
 Offers real-time severity classification of drug interactions using GPT-4.
 
@@ -109,7 +109,7 @@ Built to support retrieval-augmented validation for trustable outputs.
 
 Designed with extensibility in mind, with future chatbot and biomarker modules planned.
 
-##🔮 Future Work & Enhancements
+## 🔮 Future Work & Enhancements
 
 ✨ Integrate ClinicalTrials.gov and PubMed APIs for real-world evidence.
 
@@ -123,7 +123,7 @@ Designed with extensibility in mind, with future chatbot and biomarker modules p
 
 ✨ Launch multilingual chatbot with drug-safety queries.
 
-##📚 References
+## 📚 References
 
 AI for Detecting and Preventing Adverse Drug Events - US Pharmacist
 
