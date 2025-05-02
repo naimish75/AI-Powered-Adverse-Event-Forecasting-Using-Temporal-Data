@@ -6,9 +6,9 @@ The aim of this project is to develop a comprehensive drug interaction analysis 
 
 ## 📂 Dataset Information
 
-Drug_Info.Json: Contains structured metadata on medications including active and inactive ingredients.
+* Drug_Info.Json: Contains structured metadata on medications including active and inactive ingredients.
 
-FAERS Aggregated Dataset (CSV): Derived from FDA's Adverse Event Reporting System, this dataset includes historical drug-reaction counts by report date.
+* FAERS Aggregated Dataset (CSV): Derived from FDA's Adverse Event Reporting System, this dataset includes historical drug-reaction counts by report date.
 
 ## 🧰 Core Tech Stack & Libraries
 
