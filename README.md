@@ -119,8 +119,8 @@ User Input
 
 ## 📚 References
 
-* AI for Detecting and Preventing Adverse Drug Events - US Pharmacist
+* [AI for Detecting and Preventing Adverse Drug Events - US Pharmacist](https://www.uspharmacist.com/article/ai-for-detecting-and-preventing-adverse-drug-events)
 
-* AI-Augmented Pharmacovigilance for Adverse Drug Reaction Detection - Frontiers in Pharmacology
+* [AI-Augmented Pharmacovigilance for Adverse Drug Reaction Detection - Frontiers in Pharmacology](https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2024.1521726/full)
 
-* Machine Learning and FAERS Data: Revolutionizing Health Care Analytics for Adverse Drug Reaction Prediction - ResearchGate
+* [Machine Learning and FAERS Data: Revolutionizing Health Care Analytics for Adverse Drug Reaction Prediction - ResearchGate](https://www.researchgate.net/profile/Muhammad_Aoun2/publication/373097267_Machine_Learning_and_FAERS_Data_Revolutionizing_Health_Care_Analytics_for_Adverse_Drug_Reaction_Prediction/links/64d8b3ce78e40b48bd45d61a/Machine-Learning-and-FAERS-Data-Revolutionizing-Health-Care-Analytics-for-Adverse-Drug-Reaction-Prediction.pdf)
