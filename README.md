@@ -2,77 +2,71 @@
 
 ## 🚀 Objective
 
-The aim of this project is to develop a comprehensive drug interaction analysis and risk forecasting system that not only detects overlapping drug components but also provides severity assessment, future risk projection, and contextual medical insight. Unlike traditional static databases, this system integrates predictive modeling, intelligent language models, and a Retrieval-Augmented Generation (RAG) pipeline to deliver real-time, evidence-driven drug safety evaluations.
+The aim of this project is to develop a comprehensive drug interaction analysis and risk forecasting system that not only detects overlapping drug components but also provides severity assessment, future risk projection, and contextual medical insight. Unlike traditional static databases, this system integrates predictive modeling, intelligent language models, and evidence-driven drug safety evaluations.
 
 ## 📂 Dataset Information
 
-* Drug_Info.Json: Contains structured metadata on medications including active and inactive ingredients.
+* Drug_Info.Json: Contains structured metadata on medications, including active and inactive ingredients.
 
 * FAERS Aggregated Dataset (CSV): Derived from FDA's Adverse Event Reporting System, this dataset includes historical drug-reaction counts by report date.
 
 ## 🧰 Core Tech Stack & Libraries
 
-Frontend: Streamlit
+* Frontend: Streamlit
 
-NLP Models: facebook/bart-large-cnn, gpt-4-turbo (OpenAI API)
+* NLP Models: facebook/bart-large-cnn, gpt-4-turbo (OpenAI API)
 
-Forecasting: pmdarima (Auto ARIMA)
+* Forecasting: pmdarima (Auto ARIMA)
 
-Visualization: matplotlib
+* Visualization: matplotlib
 
-Image Handling: PIL, base64
+* Image Handling: PIL, base64
 
-Other Tools: unidecode, scikit-learn, pandas, numpy
+* Other Tools: unidecode, scikit-learn, pandas, numpy
 
 ## 🧠 Methods & Architecture
 
 1. Interaction Detection
 
-Users provide a list of current medications and one new medication.
+* Users provide a list of current medications and one new medication.
 
-For each drug, its active and inactive ingredients are extracted from Drug_Info.Json.
+* For each drug, its active and inactive ingredients are extracted from Drug_Info.Json.
 
-The system checks for overlapping ingredients between the new drug and existing ones.
+* The system checks for overlapping ingredients between the new drug and existing ones.
 
-Each interaction is flagged and passed to an LLM (GPT-4) which determines if overlapping ingredients are predominantly active or inactive.
+* Each interaction is flagged and passed to an LLM (GPT-4) which determines if overlapping ingredients are predominantly active or inactive.
 
-If the majority are inactive, a cautionary but non-alarming note is generated. If active ingredients overlap, further analysis is conducted.
+* If the majority are inactive, a cautionary but non-alarming note is generated. If active ingredients overlap, further analysis is conducted.
 
 2. Severity Analysis
 
-GPT-4 evaluates interaction descriptions and assigns a severity label (Mild, Moderate, Severe, Critical).
+* GPT-4 evaluates interaction descriptions and assigns a severity label (Mild, Moderate, Severe, Critical).
 
-This severity score is adjusted depending on the type of ingredient overlap.
+* This severity score is adjusted depending on the type of ingredient overlap.
 
-Summaries are generated using the BART model and reinforced by GPT-4 for clarity.
+* Summaries are generated using the BART model and reinforced by GPT-4 for clarity.
 
 3. Time-Series Forecasting (Adverse Reactions)
 
-FAERS data is grouped by drug and resampled to monthly counts.
+* FAERS data is grouped by drug and resampled to monthly counts.
 
-auto_arima is used to fit a model on historical reports.
+* auto_arima is used to fit a model on historical reports.
 
-Forecasts are generated for the next 3 months.
+* Forecasts are generated for the next 3 months.
 
-Results are normalized and visualized to identify drugs that may experience a spike in adverse reports.
+* Results are normalized and visualized to identify drugs that may experience a spike in adverse reports.
 
 4. Contextual Medical Summarization
 
-The forecast graph is converted to an image and passed along with text to GPT-4 Vision.
+* The forecast graph is converted to an image and passed along with text to GPT-4 Vision.
 
-The combined input produces a concise risk insight that reflects both historical interactions and projected trends.
+* The combined input produces a concise risk insight that reflects both historical interactions and projected trends.
 
-5. Retrieval-Augmented Generation (RAG)
+5. Chatbot Module (Planned/Future Work)
 
-Optional RAG layer retrieves supporting documents from medical databases.
+* A conversational agent that understands drug queries and explains interaction risks.
 
-Contextual snippets are used to augment GPT-4's reasoning, making summaries evidence-backed.
-
-6. Chatbot Module (Planned/Future Work)
-
-A conversational agent that understands drug queries and explains interaction risks.
-
-Powered by vector embeddings (e.g., FAISS) and retrieval pipelines.
+* Powered by vector embeddings (e.g., FAISS) and retrieval pipelines.
 
 ## 🧩 Framework Overview
 
@@ -85,29 +79,29 @@ User Input
 
 ## 🔍 How We Detect Interactions & Forecast Risk
 
-Ingredient Overlap: Each drug’s ingredients are normalized and compared. Exact matches signal potential interaction.
+* Ingredient Overlap: Each drug’s ingredients are normalized and compared. Exact matches signal potential interaction.
 
-Role of Active Ingredients: GPT-4 analyzes the interaction context and classifies ingredients as active or inactive. Severity analysis is skipped or downgraded if overlaps are mostly inactive.
+* Role of Active Ingredients: GPT-4 analyzes the interaction context and classifies ingredients as active or inactive. Severity analysis is skipped or downgraded if overlaps are mostly inactive.
 
-Severity Determination: GPT-4 evaluates context of overlaps (e.g., dosage form, route, category) and flags clinically meaningful combinations.
+* Severity Determination: GPT-4 evaluates context of overlaps (e.g., dosage form, route, category) and flags clinically meaningful combinations.
 
-Forecasting: For each drug, adverse event counts are modeled using ARIMA. A forecast is generated for 3 future months. Drugs with rising trends are visually emphasized.
+* Forecasting: For each drug, adverse event counts are modeled using ARIMA. A forecast is generated for 3 future months. Drugs with rising trends are visually emphasized.
 
-Visual + Textual Insight: A combined visual and narrative summary is presented to communicate clinical impact.
+* Visual + Textual Insight: A combined visual and narrative summary is presented to communicate clinical impact.
 
 ## ⭐ Key Differentiators
 
-Offers real-time severity classification of drug interactions using GPT-4.
+* Offers real-time severity classification of drug interactions using GPT-4.
 
-Distinguishes active vs inactive ingredient overlaps and dynamically adjusts risk presentation.
+* Distinguishes active vs inactive ingredient overlaps and dynamically adjusts risk presentation.
 
-Performs adverse reaction forecasting using FAERS data, unlike traditional lookup tools.
+* Performs adverse reaction forecasting using FAERS data, unlike traditional lookup tools.
 
-Integrates vision-based summarization by passing chart images to GPT-4 for medical interpretation.
+* Integrates vision-based summarization by passing chart images to GPT-4 for medical interpretation.
 
-Built to support retrieval-augmented validation for trustable outputs.
+* Built to support retrieval-augmented validation for trustable outputs.
 
-Designed with extensibility in mind, with future chatbot and biomarker modules planned.
+* Designed with extensibility in mind, with future chatbot and biomarker modules planned.
 
 ## 🔮 Future Work & Enhancements
 
@@ -125,8 +119,8 @@ Designed with extensibility in mind, with future chatbot and biomarker modules p
 
 ## 📚 References
 
-AI for Detecting and Preventing Adverse Drug Events - US Pharmacist
+* AI for Detecting and Preventing Adverse Drug Events - US Pharmacist
 
-AI-Augmented Pharmacovigilance for Adverse Drug Reaction Detection - Frontiers in Pharmacology
+* AI-Augmented Pharmacovigilance for Adverse Drug Reaction Detection - Frontiers in Pharmacology
 
-Machine Learning and FAERS Data: Revolutionizing Health Care Analytics for Adverse Drug Reaction Prediction - ResearchGate
+* Machine Learning and FAERS Data: Revolutionizing Health Care Analytics for Adverse Drug Reaction Prediction - ResearchGate
